@@ -85,12 +85,12 @@ const config = defineConfig((env: ConfigEnv) => {
     },
 
     server: {
-      port: 5001,
+      port: 5004,
       historyApiFallback: true
     },
 
     preview: {
-      port: 6001,
+      port: 6004,
     },
 
     build: {

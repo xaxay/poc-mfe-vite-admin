@@ -2,7 +2,7 @@
   "base": "/poc-mfe-vite-admin/",
   "plugins": [
     {
-      "name": "vite:build-metadata"
+      "name": "vite:optimized-deps"
     },
     {
       "name": "vite:watch-package-data"
@@ -191,7 +191,7 @@
             }
           },
           "root": "/home/mpopel/lab/poc-mfe-vite-admin",
-          "sourceMap": false,
+          "sourceMap": true,
           "cssDevSourcemap": false,
           "devToolsEnabled": false
         },
@@ -223,23 +223,10 @@
       "name": "vite:css-post"
     },
     {
-      "name": "vite:build-html"
-    },
-    {
       "name": "vite:worker-import-meta-url"
     },
     {
       "name": "vite:asset-import-meta-url"
-    },
-    {
-      "name": "vite:force-systemjs-wrap-complete"
-    },
-    {
-      "name": "commonjs",
-      "version": "26.0.1"
-    },
-    {
-      "name": "vite:data-uri"
     },
     {
       "name": "vite:dynamic-import-vars"
@@ -248,19 +235,13 @@
       "name": "vite:import-glob"
     },
     {
-      "name": "vite:build-import-analysis"
+      "name": "vite:client-inject"
     },
     {
-      "name": "vite:esbuild-transpile"
+      "name": "vite:css-analysis"
     },
     {
-      "name": "vite:terser"
-    },
-    {
-      "name": "vite:reporter"
-    },
-    {
-      "name": "vite:load-fallback"
+      "name": "vite:import-analysis"
     }
   ],
   "define": {
@@ -359,7 +340,7 @@
   },
   "server": {
     "preTransformRequests": true,
-    "port": 5001,
+    "port": 5004,
     "historyApiFallback": true,
     "middlewareMode": false,
     "fs": {
@@ -375,7 +356,7 @@
     }
   },
   "preview": {
-    "port": 6001
+    "port": 6004
   },
   "build": {
     "target": "esnext",
@@ -444,13 +425,14 @@
     "/home/mpopel/lab/poc-mfe-vite-admin/vite.config.mts"
   ],
   "inlineConfig": {
-    "build": {}
+    "build": {},
+    "preview": {}
   },
   "root": "/home/mpopel/lab/poc-mfe-vite-admin",
   "rawBase": "/poc-mfe-vite-admin/",
   "publicDir": "/home/mpopel/lab/poc-mfe-vite-admin/public",
   "cacheDir": "/home/mpopel/lab/poc-mfe-vite-admin/node_modules/.vite",
-  "command": "build",
+  "command": "serve",
   "mode": "production",
   "isWorker": false,
   "mainConfig": null,
